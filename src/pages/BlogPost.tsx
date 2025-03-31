@@ -4,7 +4,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
-import { Badge } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import CodeBlock from '@/components/CodeBlock';
 import { getPostBySlug, getRecentPosts } from '@/data/blogPosts';
 
