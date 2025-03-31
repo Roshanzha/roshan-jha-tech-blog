@@ -1,4 +1,5 @@
 
+import React, { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,7 +10,6 @@ import BlogPost from "./pages/BlogPost";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import AddBlogPost from "./pages/AddBlogPost";
-import { useEffect } from "react";
 
 const queryClient = new QueryClient();
 
@@ -29,8 +29,6 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
@@ -39,6 +37,8 @@ const App = () => {
             <Route path="/new-post" element={<AddBlogPost />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Toaster />
+          <Sonner />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
