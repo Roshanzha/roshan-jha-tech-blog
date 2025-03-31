@@ -74,7 +74,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
     font-family: 'Inter', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -118,10 +118,10 @@
     @apply list-decimal pl-5 my-4;
   }
   .blog-content pre {
-    @apply bg-secondary p-4 rounded-md my-4 overflow-x-auto;
+    @apply bg-secondary p-4 rounded-md my-4 overflow-x-auto dark:bg-gray-800;
   }
   .blog-content code {
-    @apply bg-secondary px-1 py-0.5 rounded text-sm;
+    @apply bg-secondary px-1 py-0.5 rounded text-sm dark:bg-gray-800;
   }
   .blog-content pre code {
     @apply bg-transparent p-0;
@@ -129,4 +129,8 @@
   .blog-content img {
     @apply max-w-full h-auto rounded-lg my-4;
   }
+}
+
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
