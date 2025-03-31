@@ -10,6 +10,7 @@ import BlogPost from "./pages/BlogPost";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import AddBlogPost from "./pages/AddBlogPost";
+import Subscription from "./pages/Subscription";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/post/:slug" element={<BlogPost />} />
             <Route path="/about" element={<About />} />
             <Route path="/new-post" element={<AddBlogPost />} />
+            <Route path="/subscribe" element={<Subscription />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Toaster />

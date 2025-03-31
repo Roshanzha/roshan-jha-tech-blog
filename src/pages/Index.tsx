@@ -6,6 +6,8 @@ import Footer from '@/components/Footer';
 import FeaturedPost from '@/components/FeaturedPost';
 import BlogCard from '@/components/BlogCard';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Mail, CreditCard } from 'lucide-react';
 import { getFeaturedPost, getRecentPosts } from '@/data/blogPosts';
 
 const Index = () => {
@@ -40,20 +42,56 @@ const Index = () => {
             </div>
           </section>
           
-          <section className="mt-16 bg-secondary p-8 rounded-lg">
-            <div className="text-center">
-              <h2 className="text-2xl font-bold mb-4">Subscribe to My Newsletter</h2>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Get the latest posts delivered right to your inbox. I promise not to spam you
-                or share your email with anyone else.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <input 
-                  type="email" 
-                  placeholder="Your email address" 
-                  className="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                />
-                <Button>Subscribe</Button>
+          <section className="mt-16 bg-secondary p-8 rounded-lg text-left">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-2xl font-bold mb-4">Subscribe to My Newsletter</h2>
+                <p className="text-gray-600 mb-6">
+                  Get the latest posts delivered right to your inbox. I promise not to spam you
+                  or share your email with anyone else.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Input 
+                    type="email" 
+                    placeholder="Your email address" 
+                    className="flex-1"
+                  />
+                  <Button className="flex items-center gap-2">
+                    <Mail className="h-4 w-4" />
+                    Subscribe
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="bg-card p-6 rounded-lg border">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <CreditCard className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1">Support My Work</h3>
+                    <p className="text-gray-600 text-sm">
+                      Get premium content and support my work with a paid subscription.
+                    </p>
+                  </div>
+                </div>
+                <ul className="space-y-2 mb-4 text-sm">
+                  <li className="flex items-center">
+                    <span className="mr-2 text-green-500">✓</span>
+                    <span>Exclusive in-depth articles</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="mr-2 text-green-500">✓</span>
+                    <span>Early access to new content</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="mr-2 text-green-500">✓</span>
+                    <span>Support independent publishing</span>
+                  </li>
+                </ul>
+                <Link to="/subscribe">
+                  <Button className="w-full">Subscribe Now</Button>
+                </Link>
               </div>
             </div>
           </section>
