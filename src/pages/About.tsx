@@ -13,9 +13,9 @@ const About = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="text-center mb-12">
             <img 
-              src="https://via.placeholder.com/150" 
+              src="/lovable-uploads/b5753d8b-b0f5-4051-893a-59fb2b1ec527.png" 
               alt="Roshan Jha" 
-              className="w-32 h-32 rounded-full mx-auto mb-4"
+              className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
             />
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Roshan Jha</h1>
             <p className="text-xl text-gray-600">Full Stack Developer & Technical Writer</p>
