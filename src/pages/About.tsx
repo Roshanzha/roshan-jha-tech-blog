@@ -5,7 +5,7 @@ import { SidebarProvider, SidebarTrigger, SidebarInset } from '@/components/ui/s
 import { AppSidebar } from '@/components/AppSidebar';
 import { Button } from '@/components/ui/button';
 import Footer from '@/components/Footer';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail, Youtube, Instagram } from 'lucide-react';
 
 const About = () => {
   return (
@@ -47,16 +47,22 @@ const About = () => {
                   <p className="text-xl text-gray-600">Full Stack Developer & Technical Writer</p>
                   
                   <div className="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                    <a href="https://github.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                       <Github size={22} />
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                    <a href="https://twitter.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                       <Twitter size={22} />
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                    <a href="https://linkedin.com/in/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                       <Linkedin size={22} />
                     </a>
-                    <a href="mailto:contact@example.com" className="text-gray-400 hover:text-primary">
+                    <a href="https://youtube.com/@ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                      <Youtube size={22} />
+                    </a>
+                    <a href="https://instagram.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                      <Instagram size={22} />
+                    </a>
+                    <a href="mailto:contact@roshanjha.com" className="text-gray-400 hover:text-primary">
                       <Mail size={22} />
                     </a>
                   </div>

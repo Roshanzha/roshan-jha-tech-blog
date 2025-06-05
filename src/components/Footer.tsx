@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail, Youtube, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -18,16 +17,22 @@ const Footer: React.FC = () => {
               JavaScript, React, Node.js, and other technologies.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+              <a href="https://github.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                 <Github size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+              <a href="https://twitter.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                 <Twitter size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+              <a href="https://linkedin.com/in/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:contact@example.com" className="text-gray-400 hover:text-primary">
+              <a href="https://youtube.com/@ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                <Youtube size={20} />
+              </a>
+              <a href="https://instagram.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                <Instagram size={20} />
+              </a>
+              <a href="mailto:contact@roshanjha.com" className="text-gray-400 hover:text-primary">
                 <Mail size={20} />
               </a>
             </div>
