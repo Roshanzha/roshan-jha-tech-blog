@@ -62,7 +62,7 @@ const About = () => {
                     <a href="https://instagram.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                       <Instagram size={22} />
                     </a>
-                    <a href="mailto:contact@roshanjha.com" className="text-gray-400 hover:text-primary">
+                    <a href="mailto:mail@roshanjha.com.np" className="text-gray-400 hover:text-primary">
                       <Mail size={22} />
                     </a>
                   </div>
