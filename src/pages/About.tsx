@@ -47,19 +47,19 @@ const About = () => {
                   <p className="text-xl text-gray-600">Full Stack Developer & Technical Writer</p>
                   
                   <div className="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                    <a href="https://github.com/roshanzha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                       <Github size={22} />
                     </a>
-                    <a href="https://twitter.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                    <a href="https://twitter.com/roshnzha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                       <Twitter size={22} />
                     </a>
-                    <a href="https://linkedin.com/in/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                    <a href="https://linkedin.com/in/roshanzha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                       <Linkedin size={22} />
                     </a>
-                    <a href="https://youtube.com/@ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                    <a href="https://youtube.com/@roshanzha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                       <Youtube size={22} />
                     </a>
-                    <a href="https://instagram.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                    <a href="https://instagram.com/roshnzha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                       <Instagram size={22} />
                     </a>
                     <a href="mailto:mail@roshanjha.com.np" className="text-gray-400 hover:text-primary">

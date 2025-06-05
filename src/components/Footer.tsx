@@ -18,19 +18,19 @@ const Footer: React.FC = () => {
               JavaScript, React, Node.js, and other technologies.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="https://github.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+              <a href="https://github.com/roshanzha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                 <Github size={20} />
               </a>
-              <a href="https://twitter.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+              <a href="https://twitter.com/roshnzha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                 <Twitter size={20} />
               </a>
-              <a href="https://linkedin.com/in/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+              <a href="https://linkedin.com/in/roshanzha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                 <Linkedin size={20} />
               </a>
-              <a href="https://youtube.com/@ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+              <a href="https://youtube.com/@roshanzha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                 <Youtube size={20} />
               </a>
-              <a href="https://instagram.com/ROSHANZHA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+              <a href="https://instagram.com/roshnzha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
                 <Instagram size={20} />
               </a>
               <a href="mailto:mail@roshanjha.com.np" className="text-gray-400 hover:text-primary">
