@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SidebarProvider, SidebarTrigger, SidebarInset } from '@/components/ui/sidebar';
+import { AppSidebar } from '@/components/AppSidebar';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FeaturedPost from '@/components/FeaturedPost';
@@ -15,91 +17,117 @@ const Index = () => {
   const recentPosts = getRecentPosts(featuredPost.id);
   
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      
-      <main className="flex-grow">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
-          <section className="mb-16">
-            <div className="flex justify-between items-center mb-8">
-              <h2 className="text-3xl font-bold">Featured Post</h2>
-            </div>
-            <FeaturedPost post={featuredPost} />
-          </section>
-          
-          <section>
-            <div className="flex justify-between items-center mb-8">
-              <h2 className="text-3xl font-bold">Recent Posts</h2>
-              <Link to="/archives">
-                <Button variant="outline">View All</Button>
-              </Link>
-            </div>
+    <SidebarProvider>
+      <div className="min-h-screen flex w-full">
+        <AppSidebar />
+        <SidebarInset className="flex-1">
+          <div className="flex flex-col min-h-screen">
+            <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur dark:bg-background/90 dark:border-gray-800">
+              <div className="container flex h-14 items-center">
+                <SidebarTrigger className="mr-4" />
+                <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+                  <nav className="flex items-center space-x-4">
+                    <Link to="/" className="text-sm font-medium transition-colors hover:text-primary dark:text-gray-300 dark:hover:text-primary">
+                      Home
+                    </Link>
+                    <Link to="/about" className="text-sm font-medium transition-colors hover:text-primary dark:text-gray-300 dark:hover:text-primary">
+                      About
+                    </Link>
+                  </nav>
+                  <Link to="/new-post">
+                    <Button size="sm" className="flex items-center gap-1">
+                      <span>New Post</span>
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </header>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {recentPosts.map(post => (
-                <BlogCard key={post.id} post={post} />
-              ))}
-            </div>
-          </section>
-          
-          <section className="mt-16 bg-secondary p-8 rounded-lg text-left">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-2xl font-bold mb-4">Subscribe to My Newsletter</h2>
-                <p className="text-gray-600 mb-6">
-                  Get the latest posts delivered right to your inbox. I promise not to spam you
-                  or share your email with anyone else.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Input 
-                    type="email" 
-                    placeholder="Your email address" 
-                    className="flex-1"
-                  />
-                  <Button className="flex items-center gap-2">
-                    <Mail className="h-4 w-4" />
-                    Subscribe
-                  </Button>
-                </div>
-              </div>
-              
-              <div className="bg-card p-6 rounded-lg border">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="bg-primary/10 p-2 rounded-full">
-                    <CreditCard className="h-5 w-5 text-primary" />
+            <main className="flex-grow">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
+                <section className="mb-16">
+                  <div className="flex justify-between items-center mb-8">
+                    <h2 className="text-3xl font-bold">Featured Post</h2>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-1">Support My Work</h3>
-                    <p className="text-gray-600 text-sm">
-                      Get premium content and support my work with a paid subscription.
-                    </p>
+                  <FeaturedPost post={featuredPost} />
+                </section>
+                
+                <section>
+                  <div className="flex justify-between items-center mb-8">
+                    <h2 className="text-3xl font-bold">Recent Posts</h2>
+                    <Link to="/archives">
+                      <Button variant="outline">View All</Button>
+                    </Link>
                   </div>
-                </div>
-                <ul className="space-y-2 mb-4 text-sm">
-                  <li className="flex items-center">
-                    <span className="mr-2 text-green-500">✓</span>
-                    <span>Exclusive in-depth articles</span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="mr-2 text-green-500">✓</span>
-                    <span>Early access to new content</span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="mr-2 text-green-500">✓</span>
-                    <span>Support independent publishing</span>
-                  </li>
-                </ul>
-                <Link to="/subscribe">
-                  <Button className="w-full">Subscribe Now</Button>
-                </Link>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {recentPosts.map(post => (
+                      <BlogCard key={post.id} post={post} />
+                    ))}
+                  </div>
+                </section>
+                
+                <section className="mt-16 bg-secondary p-8 rounded-lg text-left">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <h2 className="text-2xl font-bold mb-4">Subscribe to My Newsletter</h2>
+                      <p className="text-gray-600 mb-6">
+                        Get the latest posts delivered right to your inbox. I promise not to spam you
+                        or share your email with anyone else.
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Input 
+                          type="email" 
+                          placeholder="Your email address" 
+                          className="flex-1"
+                        />
+                        <Button className="flex items-center gap-2">
+                          <Mail className="h-4 w-4" />
+                          Subscribe
+                        </Button>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-card p-6 rounded-lg border">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="bg-primary/10 p-2 rounded-full">
+                          <CreditCard className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-semibold mb-1">Support My Work</h3>
+                          <p className="text-gray-600 text-sm">
+                            Get premium content and support my work with a paid subscription.
+                          </p>
+                        </div>
+                      </div>
+                      <ul className="space-y-2 mb-4 text-sm">
+                        <li className="flex items-center">
+                          <span className="mr-2 text-green-500">✓</span>
+                          <span>Exclusive in-depth articles</span>
+                        </li>
+                        <li className="flex items-center">
+                          <span className="mr-2 text-green-500">✓</span>
+                          <span>Early access to new content</span>
+                        </li>
+                        <li className="flex items-center">
+                          <span className="mr-2 text-green-500">✓</span>
+                          <span>Support independent publishing</span>
+                        </li>
+                      </ul>
+                      <Link to="/subscribe">
+                        <Button className="w-full">Subscribe Now</Button>
+                      </Link>
+                    </div>
+                  </div>
+                </section>
               </div>
-            </div>
-          </section>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
+            </main>
+            
+            <Footer />
+          </div>
+        </SidebarInset>
+      </div>
+    </SidebarProvider>
   );
 };
 
